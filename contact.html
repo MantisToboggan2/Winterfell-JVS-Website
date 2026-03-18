@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winterfell JVS | Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="/images/Wnoback.png">
+    <link rel="shortcut icon" href="/images/Wnoback.png" type="image/x-icon">
+</head>
+<body>
+<header id="main-header"> 
+    <div class="header-container">
+        <a href="index.html">
+            <img src="/images/Wnoback.png" alt="Winterfell JVS Logo" class="header-logo">
+        </a>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="shop.html">Donations</a></li>
+            </ul>
+        </nav>
+        <a href="https://discord.gg/VhrKhATrwQ" target="_blank" class="discord-btn">
+            <img src="/images/discord-icon.png" alt="Discord">
+            <span class="discord-text">Discord</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="shop.html">Donations</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="container">
+    <section class="contact-terminal">
+        <div class="terminal-status">
+            <span class="status-dot"></span> CONNECTION: SECURE
+        </div>
+        <div class="terminal-header">
+            <h1 class="mainbox-title" data-text="SUPPORT UPLINK">SUPPORT UPLINK</h1>
+            <p class="mainbox-paragraph">Direct communication to Winterfell Networks for appeals and comments or concerns. Average response time: 24-48 Hours.</p>
+            <div class="scanline"></div>
+        </div>
+        <form class="contact-form" action="https://formspree.io/f/xjgaeger" method="POST">
+            <div class="input-group">
+                <label for="ign">OPERATOR_ID</label>
+                <input type="text" id="ign" name="username" placeholder="In-game Name or Discord name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">COMM_CHANNEL</label>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-group">
+                <label for="message">TRANSMISSION_DATA</label>
+                <textarea id="message" name="message" rows="5" placeholder="Reason for contact or appeal details..." required></textarea>
+            </div>
+            <button type="submit" class="cyber-btn btn-blue" style="width: 100%; justify-content: center; margin-top: 20px;">
+                <span class="btn-content">SEND TRANSMISSION</span>
+            </button>
+        </form>
+        <p class="disclaimer-text" style="text-align: center; margin-top: 30px;">
+            END OF TRANSMISSION // WINTERFELL_NETWORKS_STABILITY_PROTOCOL
+        </p>
+    </section>
+</main>
+    <footer>
+        <a href="contact.html" class="footer-contact">Contact Us</a>
+        <p class="footer-copyright">© 2026 Winterfell Networks All rights reserved.</p>
+    </footer>
+    <div id="lightsaber-cursor-container">
+        <div class="lightsaber-blade"></div>
+        <canvas id="particle-canvas"></canvas>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

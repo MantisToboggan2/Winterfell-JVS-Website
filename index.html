@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winterfell JVS | Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="/images/Wnoback.png">
+    <link rel="shortcut icon" href="/images/Wnoback.png" type="image/x-icon">
+</head>
+<body>
+<header id="main-header"> 
+    <div class="header-container">
+        <a href="index.html">
+            <img src="/images/Wnoback.png" alt="Winterfell JVS Logo" class="header-logo">
+        </a>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="shop.html">Donations</a></li>
+            </ul>
+        </nav>
+        <a href="https://discord.gg/VhrKhATrwQ" target="_blank" class="discord-btn">
+            <img src="/images/discord-icon.png" alt="Discord">
+            <span class="discord-text">Discord</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="shop.html">Donations</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="container home-page">
+    <section class="mainbox">
+        <div class="mainbox-content">
+            <h1 class="mainbox-title" data-text="WINTERFELL JVS">WINTERFELL JVS</h1>
+            <p class="mainbox-paragraph">Join the ultimate conflict between the Light and Dark side. Experience immersive roleplay, custom crystals, and a dedicated community.</p>
+            <div class="mainbox-actions">
+                <button id="copy-ip" class="cyber-btn btn-blue" onclick="copyToClipboard()">
+                    <span class="btn-glitch"></span>
+                    <span class="btn-content" id="btn-text">CONNECT NOW</span>
+                </button>
+                <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3667122681" class="cyber-btn btn-red" target="_blank">
+                    <span class="btn-glitch"></span>
+                    <span class="btn-content">WORKSHOP COLLECTION</span>
+                </a>
+            </div>
+        </div>
+<div class="server-status-terminal">
+    <div class="terminal-bar">
+        <span class="dot"></span>
+        <span class="terminal-title">SYSTEM_STATUS.EXE</span>
+    </div>
+    <div class="status-grid">
+        <div class="stat-node">
+            <span class="stat-label">Server Status</span>
+            <span class="stat-value value online">ONLINE</span>
+        </div>
+        <div class="stat-node">
+            <span class="stat-label">Currently Playing</span>
+            <span id="player-count" class="stat-value">-- / --</span>
+        </div>
+        <div class="stat-node">
+            <span class="stat-label">Current Map</span>
+            <span id="current-map" class="stat-value">LOADING...</span>
+        </div>
+        <div class="stat-node">
+            <span class="stat-label">Peak Players</span>
+            <span id="max-players" class="stat-value">--</span>
+        </div>
+        <div class="stat-node">
+            <span class="stat-label">Weekly Average</span>
+            <span id="avg-players" class="stat-value">--</span>
+        </div>
+        <div class="stat-node">
+            <span class="stat-label">Unique Player Count</span>
+            <span id="unique-players" class="stat-value">--</span>
+        </div>
+    </div>
+</div>
+    </section>
+<section class="scroll-stack">
+        <div class="sticky-wrapper first-slide">
+            <div class="sticky-content slide-left">
+                <div class="title-wrapper">
+                    <h2 class="faction-title">The Jedi Order</h2>
+                </div>
+                <div class="image-container">
+                    <img src="images/tython.jpg" alt="Jedi Order">
+                </div>
+            </div>
+        </div>
+        <div class="sticky-wrapper">
+            <div class="sticky-content slide-right">
+                <div class="title-wrapper">
+                    <h2 class="faction-title">The Sith Empire</h2>
+                </div>
+                <div class="image-container">
+                    <img src="images/koriban.jpg" alt="Sith Empire">
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="team-section">
+    <div class="terminal-header">
+        <h2 class="team-title">TEAM MEMBERS</h2>
+        <div class="scanline"></div>
+    </div> 
+    <div class="team-grid">
+        <div class="team-group">
+            <h3 class="group-label">LEADERSHIP_UNITS</h3>
+            <div class="cards-container">
+                <div class="member-card founder" id="member-lucifer">
+                    <span class="rank">FOUNDER</span>
+                    <h4 class="name">Lucifer</h4>
+                    <div class="card-status">ACTIVE</div>
+                </div>
+                <div class="member-card founder" id="member-leonidas">
+                    <span class="rank">FOUNDER</span>
+                    <h4 class="name">Leonidas</h4>
+                    <div class="card-status">ACTIVE</div>
+                </div>
+                <div class="member-card founder" id="member-daemon">
+                    <span class="rank">FOUNDER</span>
+                    <h4 class="name">Daemon</h4>
+                    <div class="card-status">ACTIVE</div>
+                </div>
+            </div>
+        </div>
+        <div class="team-group">
+            <h3 class="group-label">MANAGEMENT_CORE</h3>
+            <div class="cards-container">
+                <div class="member-card staff-lead" id="member-joker">
+                    <span class="rank">HEAD DEVELOPER</span>
+                    <h4 class="name">Vane</h4>
+                    <div class="card-status">ACTIVE</div>
+                </div>
+                <div class="member-card staff-lead" id="member-void">
+                    <span class="rank">HEAD GAMEMASTER</span>
+                    <h4 class="name">*TBD*</h4>
+                    <div class="card-status"></div>
+                </div>
+                <div class="member-card staff-lead" id="member-void">
+                    <span class="rank">HEAD OF STAFF</span>
+                    <h4 class="name">Void</h4>
+                    <div class="card-status">ACTIVE</div>
+                </div>
+            </div>
+        </div>
+        <div class="team-group">
+            <h3 class="group-label">TECHNICAL_OPERATIVES</h3>
+            <div class="cards-container">
+                <div class="member-card dev" id="member-marcus">
+                    <span class="rank">DEVELOPER</span>
+                    <h4 class="name">Mantis</h4>
+                    <div class="card-status">ACTIVE</div>
+                </div>
+                <div class="member-card dev" id="member-mantis">
+                    <span class="rank">DEVELOPER</span>
+                    <h4 class="name">Marcus</h4>
+                    <div class="card-status">ACTIVE</div>
+                </div>
+                <div class="member-card dev" id="member-lazar">
+                    <span class="rank">DEVELOPER</span>
+                    <h4 class="name">Lazar</h4>
+                    <div class="card-status">ACTIVE</div>
+                </div>
+            </div>
+        </div>
+        <div class="team-group">
+            <h3 class="group-label">FIELD_MODERATORS</h3>
+            <div class="cards-container">
+                <div class="member-card staff" id="member-rune">
+                    <span class="rank">MODERATOR</span>
+                    <h4 class="name">Rune Saris</h4>
+                    <div class="card-status">ACTIVE</div>
+                </div>
+                <div class="member-card staff" id="member-deebo">
+                    <span class="rank">MODERATOR</span>
+                    <h4 class="name">Deebo</h4>
+                    <div class="card-status">ACTIVE</div>
+                </div>
+                <div class="member-card staff" id="member-kntrl">
+                    <span class="rank">MODERATOR</span>
+                    <h4 class="name">KNTRL</h4>
+                    <div class="card-status">ACTIVE</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+    <footer>
+        <a href="contact.html" class="footer-contact">Contact Us</a>
+        <p class="footer-copyright">© 2026 Winterfell Networks All rights reserved.</p>
+    </footer>
+    <div id="lightsaber-cursor-container">
+        <div class="lightsaber-blade"></div>
+        <canvas id="particle-canvas"></canvas>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
