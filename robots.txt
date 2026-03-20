@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Allow: /index.html
+Allow: /rules.html
+Allow: /shop.html
+Allow: /contact.html
 
 Sitemap: https://winterfellnetworks.com/sitemap.xml
