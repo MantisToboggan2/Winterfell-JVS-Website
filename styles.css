@@ -606,11 +606,6 @@ body {
   transform: translateX(100%);
 }
 
-#member-joker .card-status {
-  color: rgb(255, 0, 0);
-  text-shadow: 0px 0px 5px rgb(255, 0, 0);
-}
-
 .rank {
   font-size: 11px;
   color: rgba(255, 255, 255, 0.5);
