@@ -32,48 +32,53 @@ const Winterfell = {
     },
 
 async initServerStats() {
-        const playerEl = document.getElementById("player-count");
-        const mapEl = document.getElementById("current-map");
-        const peakEl = document.getElementById("max-players");
-        const avgEl = document.getElementById("avg-players");
-        const uniqueEl = document.getElementById("unique-players");
-        const statusLabel = document.querySelector(".stat-value.online");
+    const playerEl = document.getElementById("player-count");
+    const mapEl = document.getElementById("current-map");
+    const peakEl = document.getElementById("max-players");
+    const uniqueEl = document.getElementById("unique-players");
+    const statusLabel = document.querySelector(".stat-value.online");
+    const avgDailyEl = document.getElementById("avg-daily");
+    const avgWeeklyEl = document.getElementById("avg-weekly");
+    const avgMonthlyEl = document.getElementById("avg-monthly");
+    const avgAllTimeEl = document.getElementById("avg-alltime");
 
-        if (!playerEl || !mapEl || !statusLabel) return;
+    if (!playerEl || !mapEl || !statusLabel) return;
 
-        try {
-            const response = await fetch('/api/stats');
-            const data = await response.json();
+    try {
+        const response = await fetch('/api/stats');
+        const data = await response.json();
 
-            const updateWithPulse = (el, newValue) => {
-                if (el && el.innerText !== String(newValue)) {
-                    el.innerText = newValue;
-                    el.style.transition = "none";
-                    el.style.color = "#fff700";
-                    el.style.textShadow = "0 0 15px #fff700";
-                    
-                    setTimeout(() => {
-                        el.style.transition = "all 1s ease";
-                        el.style.color = "";
-                        el.style.textShadow = ""; 
-                    }, 100);
-                }
-            };
+        const updateWithPulse = (el, newValue) => {
+            if (el && el.innerText !== String(newValue)) {
+                el.innerText = newValue;
+                el.style.transition = "none";
+                el.style.color = "#fff700";
+                el.style.textShadow = "0 0 15px #fff700";
+                
+                setTimeout(() => {
+                    el.style.transition = "all 1s ease";
+                    el.style.color = "";
+                    el.style.textShadow = ""; 
+                }, 100);
+            }
+        };
 
-            updateWithPulse(playerEl, `${data.live} / ${data.max_total}`);
-            updateWithPulse(mapEl, data.map);
-            updateWithPulse(peakEl, data.peak);
-            updateWithPulse(avgEl, data.avg);
-            const uniqueValue = data.unique || data.unique_players || data.unique_count || "0";
-            updateWithPulse(uniqueEl, uniqueValue);
+        updateWithPulse(playerEl, `${data.live} / ${data.max_total}`);
+        updateWithPulse(mapEl, data.map);
+        updateWithPulse(peakEl, data.peak);
+        updateWithPulse(avgDailyEl, data.avg_daily || "--");
+        updateWithPulse(avgWeeklyEl, data.avg_weekly || data.avg || "--");
+        updateWithPulse(avgMonthlyEl, data.avg_monthly || "--");
+        updateWithPulse(avgAllTimeEl, data.avg_alltime || "--");
 
-            statusLabel.innerText = "ONLINE";
-            statusLabel.style.color = "";
-            statusLabel.style.textShadow = "";
-        } catch (error) {
-            this.setOffline(playerEl, mapEl, statusLabel);
-        }
-    },
+        const uniqueValue = data.unique || data.unique_players || data.unique_count || "0";
+        updateWithPulse(uniqueEl, uniqueValue);
+
+        statusLabel.innerText = "ONLINE";
+    } catch (error) {
+        this.setOffline(playerEl, mapEl, statusLabel);
+    }
+},
 
     setOffline(playerEl, mapEl, statusLabel) {
         if (playerEl) playerEl.innerText = "0 / 0";
